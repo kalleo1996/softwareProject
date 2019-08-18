@@ -47,7 +47,7 @@ constructor(props) {
 
     var data ={"uname":username,"amount":amount,"duration":duration,"rate":rate,"negotiation":negotiation,}
 
-   fetch('http://192.168.8.100:8080/api/auth/userbreq', {
+   fetch('http://192.168.1.9:8080/api/auth/userbreq', {
     method: 'POST',
     headers: {
       Accept: 'application/json',

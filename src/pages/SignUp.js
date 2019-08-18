@@ -47,8 +47,8 @@ constructor(props) {
     
 	 var data ={"role": ["user"],"name":name, "username":username,"email":email,"password":password}
    
-   
-  fetch('http://192.168.8.100:8080/api/auth/signup', {
+
+  fetch('http://192.168.1.9:8080/api/auth/signup', {
     method: 'POST',
     headers: {
       Accept: 'application/json',

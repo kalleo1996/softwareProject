@@ -55,7 +55,7 @@ constructor(props) {
 
     var data ={"uid":UserId ,"name":name,"uname":username,"username":usname,"email":email,"password":password}
 
-   fetch('http://192.168.8.100:8080/api/auth/psignup', {
+   fetch('http://192.168.1.9:8080/api/auth/psignup', {
     method: 'POST',
     headers: {
       Accept: 'application/json',

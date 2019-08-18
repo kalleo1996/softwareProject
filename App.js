@@ -8,7 +8,7 @@
  */
 
 import React, { Component } from 'react';
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator, createAppContainer,createDrawerNavigator,DrawerItems,HeaderButtons, } from "react-navigation";
 import { Platform, StyleSheet, View, StatusBar, Text ,AsyncStorage ,Button} from 'react-native';
 
 import Login from './src/pages/Login';
@@ -45,8 +45,7 @@ const instructions = Platform.select({
 
 
 
-type Props = {};
-class App extends Component<Props> {
+class App extends Component<{}> {
 
  constructor(props) {
         super(props);
@@ -66,6 +65,44 @@ class App extends Component<Props> {
     }
 }
 
+const Drawer = createDrawerNavigator({
+    login: {
+        screen: Login,
+    
+      },
+        Sign_Up: {
+        
+        screen :SignUp,
+    
+    
+        },
+        Menu: Menu,
+
+}, {
+    contentOptions: {
+        activeTintColor :'#ffffff',
+        inactiveTintColor :'#0172a0',
+      },
+    initialRouteName: 'Menu',
+    drawerOpenRoute: 'DrawerOpen',
+    drawerCloseRoute: 'DrawerClose',
+    drawerToggleRoute: 'DrawerToggle',
+    contentComponent: (props) => (
+    
+         <ImageBackground source={{ uri: 'https://i.imgur.com/StNtgvB.jpg' }}  style={{flex:1}}>
+            <View style={{height: 160,alignItems: 'center', justifyContent: 'center'}}>
+    
+            <Image source={{ uri: 'https://www.iconbunny.com/icons/media/catalog/product/1/6/168.9-phone-icon-iconbunny.jpg' }} style={{flex:1}}/>
+            </View>
+          <ScrollView>
+            <DrawerItems {...props} />
+          </ScrollView>
+        </ImageBackground>
+       )
+}
+
+
+);
 const AppStackNavigator = createStackNavigator({
   
   login: {
@@ -79,6 +116,19 @@ const AppStackNavigator = createStackNavigator({
 
 	},
     Menu: Menu,
+    Drawer:{
+        screen: Drawer,
+        navigationOptions:{
+            
+              
+                headerLeft: (
+                    <Button title="close" onPress={ () => this.props.navigation.navigate('Drawer') } />
+                )
+              
+            
+          }
+
+    },
 	 investeeForm: PopUpFormInvestee,
   investorForm: PopUpFormInvestor,
     LPForm: LoanProviderForm,

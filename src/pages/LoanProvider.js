@@ -67,7 +67,7 @@ constructor(props) {
 
     var data ={"uname":username,"amount":amount,"duration":duration,"rate":rate,"negotiation":negotiation,}
 
-   fetch('http://192.168.8.100:8080/api/auth/userareq', {
+   fetch('http://192.168.1.9:8080/api/auth/userareq', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -242,15 +242,17 @@ constructor(props) {
 
 			   <ImageBackground source={{ uri: 'https://cdn.iconscout.com/icon/premium/png-256-thumb/investor-52-807273.png' }} style={{ width:100, height:100 ,	flex:1,marginVertical:10,marginHorizontal:10,alignItems: 'center'}}>
 		    
-			 <TouchableOpacity  onPress={() => this.props.navigation.navigate('getAlluser',{username:this.state.username})}>
-                    <Text style={styles.buttonText}>View loan Receivers Request</Text>
+       <TouchableOpacity
+        onPress={() => this.props.navigation.navigate('getAlluser',{username:this.state.username})}
+         >
+                    <Text style={styles.buttonText}>View Loan receivers  Request</Text>
                 </TouchableOpacity>
 			</ImageBackground>
 			   
 			  <ImageBackground source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDuM2Eoz8M1zb8iG0rKrS6xZXh4i0zCgp9usgBRpj1SCXPZi79' }} style={{ width:100, height:100 ,	flex:1,marginVertical:10,marginHorizontal:10,alignItems: 'center'}}>
 		    
 			 <TouchableOpacity>
-                    <Text style={styles.buttonText}>View Accepted investors request</Text>
+                    <Text style={styles.buttonText}>View Accepted  request</Text>
                 </TouchableOpacity>
 			</ImageBackground>
 			 <ImageBackground source={{ uri: 'https://cdn.iconscout.com/icon/premium/png-256-thumb/lawyer-35-841710.png' }} style={{ width:100, height:100 ,	flex:1,marginVertical:10,marginHorizontal:10,alignItems: 'center'}}>

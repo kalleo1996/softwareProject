@@ -16,7 +16,7 @@ import {
 import MultiText from '../components/MultiText'; 
 
 
- class Form2 extends Component<{}> {
+ class Form2 extends Component{
 
     render() {
         return (

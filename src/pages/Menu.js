@@ -89,7 +89,7 @@ type Props = {};
   
   //let name =JSON.parse(this.state.username).token;
 
-   fetch('http://192.168.8.100:8080/api/auth/usera/uname/' + this.state.username, {
+   fetch('http://192.168.1.9:8080/api/auth/usera/uname/' + this.state.username, {
     method:'GET',
     headers: {
         Accept: 'application/json',
@@ -156,10 +156,9 @@ type Props = {};
   
   //let name =JSON.parse(this.state.username).token;
 
-   fetch('http://192.168.8.100:8080/api/auth/userb/uname/' + this.state.username, {
+   fetch('http://192.168.1.9:8080/api/auth/userb/uname/' + this.state.username, {
     method:'GET',
     headers: {
-
         Accept: 'application/json',
       'Content-Type': 'application/json',
     },
@@ -224,7 +223,7 @@ type Props = {};
   
   //let name =JSON.parse(this.state.username).token;
 
-   fetch('http://192.168.8.100:8080/api/auth/userc/uname/' + this.state.username, {
+   fetch('http://192.168.1.9:8080/api/auth/userc/uname/' + this.state.username, {
     method:'GET',
     headers: {
         Accept: 'application/json',
@@ -290,7 +289,7 @@ type Props = {};
   
   //let name =JSON.parse(this.state.username).token;
 
-   fetch('http://192.168.8.100:8080/api/auth/userd/uname/' + this.state.username, {
+   fetch('http://192.168.1.9:8080/api/auth/userd/uname/' + this.state.username, {
     method:'GET',
     headers: {
         Accept: 'application/json',
